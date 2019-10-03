@@ -1,6 +1,6 @@
 package com.ing.products.constants;
 
-public class FundTransferConstants {
+public class ProductConstants {
 	
 	public static final String SUCCESS_STATUS_CODE = "200";
 	
