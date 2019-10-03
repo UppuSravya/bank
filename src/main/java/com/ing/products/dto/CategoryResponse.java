@@ -2,16 +2,18 @@ package com.ing.products.dto;
 
 import java.util.List;
 
-import com.ing.products.entity.Product;
+import com.ing.products.entity.Category;
 
-public class CategoryProductResponse {
+public class CategoryResponse {
 	
-	private List<Product> Products;
-	public List<Product> getProducts() {
-		return Products;
+	List<Category> category;
+	String statusCode;
+	String message;
+	public List<Category> getCategory() {
+		return category;
 	}
-	public void setProducts(List<Product> products) {
-		Products = products;
+	public void setCategory(List<Category> category) {
+		this.category = category;
 	}
 	public String getStatusCode() {
 		return statusCode;
@@ -25,9 +27,5 @@ public class CategoryProductResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	private String statusCode;
-	private String message;
-	
-
 
 }

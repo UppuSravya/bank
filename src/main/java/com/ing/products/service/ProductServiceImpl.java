@@ -5,22 +5,21 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.ing.products.entity.Product;
-import com.ing.products.repository.CategoryRepository;
 import com.ing.products.repository.ProductRepository;
 
 
 @Service
 public class ProductServiceImpl implements ProductService {
-	
-	@Autowired
-	CategoryRepository categoryrepository;
-	
+		
 	@Autowired
 	ProductRepository productrepository;
 	
+	
 	public Optional<List<Product>> showproducts(int categoryId) {
-		return productrepository.findAllByCategoryId(categoryId);
+		
+		return productrepository.findAllByProductCategoryId(categoryId);
 	}
-}
 
+}
